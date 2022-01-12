@@ -1,0 +1,57 @@
+<!DocTYPE html>
+<html>
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function ChangeColor(){
+                 var SeletColor = document.getElementById("selectColor").value;
+                 var bodyGround = documen.getElementById("body");
+                 bodyGround.style.bacgrouncolor = SeletColor;
+            }
+                function validFrom(){
+                    var name = document.regiset.username.value;
+                    var password =document.regiset.password.value;
+                    var email =document.regiset.email.value;
+                    if(name == null || name.length <= 3 ||name.length >= 10 )
+                    {
+                         alert("The Name Is Wrong !");
+                         return flase;
+                    }
+                    if(password= null || ){
+
+                    }
+                }
+        </script>
+    </head>
+    <body>
+
+      <div id="conainer-change-color" onchange="ChangeColor()">
+    <select id="selectColor">
+    <option value="black">Dark</option>
+    <option value="white">Light</option>
+    </select>
+</div>
+        <form name="regiset" method="post" onsubmit="return validFrom()">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label>User Name</label>
+                <input type="text" name="username">
+                <label>Password</label>
+                <input type="password" name="password">
+                <label>E-mail</label>
+                <input type="email" name="email">
+                <label>Gender</label>
+                <select name="Gender" id="">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <button type="submit" value="Send Your Data">Regiset</button>
+            </fieldset>
+          
+        </form>
+    </body>
+</html>
